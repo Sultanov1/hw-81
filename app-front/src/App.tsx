@@ -1,8 +1,16 @@
+import Toolbar from "./features/components/Toolbar.tsx";
+import Home from "./features/Home.tsx";
+
 const App = () => {
     return (
-        <div>
-            Init App
-        </div>
+       <>
+           <header>
+               <Toolbar/>
+           </header>
+           <main>
+               <Home/>
+           </main>
+       </>
     );
 };
 
