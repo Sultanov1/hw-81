@@ -11,7 +11,7 @@ app.use(cors(config.corsOptions));
 app.use(express.static('public'));
 app.use(express.json());
 
-app.use('/links', linkRouter)
+app.use('/', linkRouter)
 
 const run = async () => {
     await mongoose.connect('mongodb://localhost/links');
