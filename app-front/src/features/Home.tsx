@@ -13,12 +13,17 @@ const Home = () => {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
+
+        if (url.link !== '') {
             await dispatch(createLink(url));
 
             setUrl((prevState) => ({
                 ...prevState,
                 link: ''
             }));
+        } else {
+            alert('Please try again and enter your own link!');
+        }
     }
 
     const inputChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
